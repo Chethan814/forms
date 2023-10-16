@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 800px;
+    max-width: 800px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.form {
+    width: 90%;
+    margin: 10px 0;
+}
+
+.container .text {
+    width: 100%;
+    text-align: center;
+    font-size: 41px;
+    font-weight: 600;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.form .form-input,
+textarea {
+    display: block;
+    width: 20vw;
+    height: 40px;
+    font-size: 1.3rem;
+    position: relative;
+    transition: all .4s;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-style: none none solid none;
+}
+
+textarea {
+    border-width: 2px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.form .form-label {
+    font-size: 1rem;
+    color: black;
+    display: block;
+    transform: translateY(-2em);
+    transform-origin: 0 0;
+    transition: all .3s;
+}
+
+.txt-label {
+    font-size: 1rem;
+    color: black;
+    display: block;
+    transform: translate(-17.6rem, -2.5rem);
+    transform-origin: 0 0;
+    transition: all .3s;
+}
+
+.form .form-input:focus {
+    border-color: #3498db;
+}
+
+.form textarea:focus {
+    border-color: #3498db;
+}
+
+.container input:focus+.form-label,
+.container input:not(:placeholder-shown)+.form-label {
+    transform: translateY(-3.3rem) scale(0.8);
+    color: #3498db;
+}
+
+.form textarea:focus+.txt-label,
+.container textarea:not(:placeholder-shown)+.txt-label {
+    transform: translate(-17.6rem, -3.8rem) scale(0.8);
+    color: #3498db;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    display: block;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
